@@ -9,12 +9,14 @@
 </head>
 <body>
     <main id="quiz">
+        <h1>Color Quiz</h1>
+        <p>Answer the questions below to have a color palette suited to your personality created especially for you. Answer as truthfully as you can!</p>
         <form id="color-quiz">
             <fieldset>
                 <legend>What animal do you identify with?</legend>
                 <label>Elephant</label>
                 <input type="radio" id="elephant" name="animal" value="elephant">
-                <label>Box jellyfish</label>
+                <label>Box Jellyfish</label>
                 <input type="radio" id="jellyfish" name="animal" value="jellyfish">
                 <label>Snake</label>
                 <input type="radio" id="snake" name="animal" value="snake">
@@ -33,21 +35,136 @@
                 <legend>Where would you build your vacation home?</legend>
                 <label>Tropical Island</label>
                 <input type="radio" id="tropical-island" name="vacation" value="tropical-island">
-                <label>A bustling metropolis</label>
+                <label>A Bustling Metropolis</label>
                 <input type="radio" id="metropolis" name="vacation" value="metropolis">
-                <label>Lil' shack on the prairie</label>
+                <label>On the Prairie</label>
                 <input type="radio" id="prairie" name="vacation" value="prairie">
-                <label>Under the sea</label>
+                <label>Under the Sea</label>
                 <input type="radio" id="sea" name="vacation" value="sea">
-                <label>Amongst the clouds</label>
+                <label>Amongst the Clouds</label>
                 <input type="radio" id="clouds" name="vacation" value="clouds">
-                <label>In the woods</label>
+                <label>In the Woods</label>
                 <input type="radio" id="woods" name="vacation" value="woods">
-                <label>On an alpine peak</label>
+                <label>On an Alpine Peak</label>
                 <input type="radio" id="alpine" name="vacation" value="alpine">
-                <label>In a small village</label>
+                <label>In a Small Village</label>
                 <input type="radio" id="village" name="vacation" value="village">
             </fieldset>
+            <fieldset>
+                <legend>Choose a Color:</legend>
+                <label>Cerulean</label>
+                <input type="radio" id="cerulean" name="fave-color" value="cerulean">
+                <label>Mauve</label>
+                <input type="radio" id="mauve" name="fave-color" value="mauve">
+                <label>Chartreuse</label>
+                <input type="radio" id="chartreuse" name="fave-color" value="chartreuse">
+                <label>Quinacridone Gold</label>
+                <input type="radio" id="quin-gold" name="fave-color" value="quin-gold">
+                <label>Magenta</label>
+                <input type="radio" id="magenta" name="fave-color" value="magenta">
+                <label>Pewter</label>
+                <input type="radio" id="pewter" name="fave-color" value="pewter">
+                <label>Periwinkle</label>
+                <input type="radio" id="periwinkle" name="fave-color" value="periwinkle">
+                <label>Midnight</label>
+                <input type="radio" id="midnight" name="fave-color" value="midnight">
+            </fieldset>
+            <fieldset>
+                <legend>Choose a Movie:</legend>
+                <label>Commando</label>
+                <input type="radio" id="commando" name="movie" value="commando">
+                <label>Terminator 2</label>
+                <input type="radio" id="terminator-2" name="movie" value="terminator-2">
+                <label>Twins</label>
+                <input type="radio" id="twins" name="movie" value="twins">
+                <label>Kindergarten Cop</label>
+                <input type="radio" id="kindergarten-cop" name="movie" value="kindergarten-cop">
+                <label>Predator</label>
+                <input type="radio" id="predator" name="movie" value="predator">
+                <label>Total Recall</label>
+                <input type="radio" id="total-recall" name="movie" value="total-recall">
+                <label>True Lies</label>
+                <input type="radio" id="true-lies" name="movie" value="true-lies">
+                <label>All of the above</label>
+                <input type="radio" id="all-movies" name="movie" value="all-movies"> 
+            </fieldset>
+            <fieldset>
+                <legend>Choose an autobiography title:</legend>
+                <label>My Life in Color</label>
+                <input type="radio" id="life-color" name="autobiography" value="life-color">
+                <label>My Awfully Big Adventure</label>
+                <input type="radio" id="big-adventure" name="autobiography" value="big-adventure">
+                <label>50 Shades of Grey</label>
+                <input type="radio" id="shades-of-grey" name="autobiography" value="shades-of-grey">
+                <label>Hold My Beer</label>
+                <input type="radio" id="beer" name="autobiography" value="beer">
+                <label>Potato Dreaming</label>
+                <input type="radio" id="potato" name="autobiography" value="potato">
+                <label>Why Cats Paint</label>
+                <input type="radio" id="cats" name="autobiography" value="cats">
+            </fieldset>
+            <fieldset>
+                <legend>Someone calls you a ding dong. You respond with:</legend>
+                <label>"I know you are but what am I?"</label>
+                <input type="radio" id="pee-wee" name="ding-dong" value="pee-wee">
+                <label>"Who's there???"</label>
+                <input type="radio" id="whos-there" name="ding-dong" value="whos-there">
+                <label>No words, you just punch them</label>
+                <input type="radio" id="punch" name="ding-dong" value="punch">
+                <label>No words, you just laugh</label>
+                <input type="radio" id="laugh" name="ding-dong" value="laugh">
+                <label>Running away</label>
+                <input type="radio" id="run-away" name="ding-dong" value="run-away">
+                <label>Playfully saying "You are too!"</label>
+                <input type="radio" id="you-are" name="ding-dong" value="you-are">
+            </fieldset>
+            <fieldset>
+                <legend>Choose a number:</legend>
+                <span>1</span><input type="range" id="number-choice" name="number-choice" min="1" max="13"><span>13</span>
+                <span id="number-chosen"></span>
+            </fieldset>
+            <fieldset>
+                <legend>Choose a Cuisine</legend>
+                <label>Thai</label>
+                <input type="radio" id="thai" name="cuisine" value="thai">
+                <label>Mexican</label>
+                <input type="radio" id="mexican" name="cuisine" value="mexican">
+                <label>Italian</label>
+                <input type="radio" id="italian" name="cuisine" value="italian">
+                <label>Greek</label>
+                <input type="radio" id="greek" name="cuisine" value="greek">
+                <label>Ethiopian</label>
+                <input type="radio" id="ethiopian" name="cuisine" value="ethiopian">
+                <label>American</label>
+                <input type="radio" id="american" name="cuisine" value="american">
+                <label>German</label>
+                <input type="radio" id="german" name="cuisine" value="german">
+                <label>Japanese</label>
+                <input type="radio" id="japanese" name="cuisine" value="japanese">
+                <label>Korean</label>
+                <input type="radio" id="korean" name="cuisine" value="korean">
+            </fieldset>
+            <fieldset>
+                <legend>Pick a dog name:</legend>
+                <label>Doge</label>
+                <input type="radio" id="doge" name="dog-name" value="doge">
+                <label>Frank</label>
+                <input type="radio" id="frank" name="dog-name" value="frank">
+                <label>Bear</label>
+                <input type="radio" id="bear" name="dog-name" value="bear">
+                <label>Spot</label>
+                <input type="radio" id="spot" name="dog-name" value="spot">
+                <label>Katie Rose</label>
+                <input type="radio" id="katie-rose" name="dog-name" value="katie-rose">
+                <label>Stevie</label>
+                <input type="radio" id="stevie" name="dog-name" value="stevie">
+                <label>Brian</label>
+                <input type="radio" id="brian" name="dog-name" value="brian">
+                <label>Lucky</label>
+                <input type="radio" id="lucky" name="dog-name" value="lucky">
+            </fieldset>
+            <button>YOUR COLOR PALETTE IS....
+            </button>
         </form>
     </main>
 </body>
