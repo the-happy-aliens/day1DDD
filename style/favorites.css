@@ -1,0 +1,21 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    width: 150px;
+    height: 175px;
+    overflow: hidden;
+}
+
+.color-block {
+    width: 30px;
+    height: 75px;
+    background-color: black;
+    display: inline-block;
+    margin: -2px;
+}
