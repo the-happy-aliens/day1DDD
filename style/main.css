@@ -4,6 +4,7 @@ body {
     background-color: black;
     color: #C4C4C4;
     font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 h1 {
@@ -54,4 +55,8 @@ h1 {
         color:#e06d08;
     }
 
+}
+
+#firebase-auth-container {
+    margin: 50px;
 }
