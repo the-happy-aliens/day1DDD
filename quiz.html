@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style/quiz.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
-
 
     <title>Quiz time</title>
 </head>
@@ -18,7 +21,7 @@
             <fieldset class="yellow">
                 <legend class="yellow">What animal do you identify with?</legend>
                 <label>Elephant</label>
-                <input type="radio" id="elephant" name="animal" value="elephant">
+                <input type="radio" id="elephant" name="animal" value="elephant" required>
                 <label>Box Jellyfish</label>
                 <input type="radio" id="jellyfish" name="animal" value="jellyfish">
                 <label>Snake</label>
@@ -37,7 +40,7 @@
             <fieldset class="green">
                 <legend class="green">Where would you build your vacation home?</legend>
                 <label>Tropical Island</label>
-                <input type="radio" id="tropical-island" name="vacation" value="tropical-island">
+                <input type="radio" id="tropical-island" name="vacation" value="tropical-island" required>
                 <label>A Bustling Metropolis</label>
                 <input type="radio" id="metropolis" name="vacation" value="metropolis">
                 <label>On the Prairie</label>
@@ -56,7 +59,7 @@
             <fieldset class="mint">
                 <legend class="mint">Choose a Color:</legend>
                 <label>Cerulean</label>
-                <input type="radio" id="cerulean" name="fave-color" value="cerulean">
+                <input type="radio" id="cerulean" name="fave-color" value="cerulean" required>
                 <label>Mauve</label>
                 <input type="radio" id="mauve" name="fave-color" value="mauve">
                 <label>Chartreuse</label>
@@ -75,7 +78,7 @@
             <fieldset class="violet">
                 <legend class="violet">Choose a Movie:</legend>
                 <label>Commando</label>
-                <input type="radio" id="commando" name="movie" value="commando">
+                <input type="radio" id="commando" name="movie" value="commando" required>
                 <label>Terminator 2</label>
                 <input type="radio" id="terminator-2" name="movie" value="terminator-2">
                 <label>Twins</label>
@@ -94,7 +97,7 @@
             <fieldset class="pink">
                 <legend class="pink">Choose an autobiography title:</legend>
                 <label>My Life in Color</label>
-                <input type="radio" id="life-color" name="autobiography" value="life-color">
+                <input type="radio" id="life-color" name="autobiography" value="life-color" required>
                 <label>My Awfully Big Adventure</label>
                 <input type="radio" id="big-adventure" name="autobiography" value="big-adventure">
                 <label>50 Shades of Grey</label>
@@ -109,7 +112,7 @@
             <fieldset class="red">
                 <legend class="red">Someone calls you a ding dong. You respond with:</legend>
                 <label>"I know you are but what am I?"</label>
-                <input type="radio" id="pee-wee" name="ding-dong" value="pee-wee">
+                <input type="radio" id="pee-wee" name="ding-dong" value="pee-wee" required>
                 <label>"Who's there???"</label>
                 <input type="radio" id="whos-there" name="ding-dong" value="whos-there">
                 <label>No words, you just punch them</label>
@@ -123,13 +126,13 @@
             </fieldset>
             <fieldset class="orange">
                 <legend class="orange">Choose a number:</legend>
-                <span>1</span><input type="range" id="number-choice" name="number-choice" min="1" max="13"><span>13</span>
+                <span>1</span><input type="range" id="number-choice" name="number-choice" min="1" max="13" required><span>13</span>
                 <span id="number-chosen"></span>
             </fieldset>
             <fieldset class="yellow">
                 <legend class="yellow">Choose a Cuisine</legend>
                 <label>Thai</label>
-                <input type="radio" id="thai" name="cuisine" value="thai">
+                <input type="radio" id="thai" name="cuisine" value="thai" required>
                 <label>Mexican</label>
                 <input type="radio" id="mexican" name="cuisine" value="mexican">
                 <label>Italian</label>
@@ -150,7 +153,7 @@
             <fieldset class="green">
                 <legend class="green">Pick a dog name:</legend>
                 <label>Doge</label>
-                <input type="radio" id="doge" name="dog-name" value="doge">
+                <input type="radio" id="doge" name="dog-name" value="doge" required>
                 <label>Frank</label>
                 <input type="radio" id="frank" name="dog-name" value="frank">
                 <label>Bear</label>
@@ -166,9 +169,9 @@
                 <label>Lucky</label>
                 <input type="radio" id="lucky" name="dog-name" value="lucky">
             </fieldset>
-            <button>YOUR COLOR PALETTE IS....
-            </button>
+            <button>YOUR COLOR PALETTE IS....</button>
         </form>
     </main>
+    <script type="module" src="src/quiz.js"></script>
 </body>
 </html>

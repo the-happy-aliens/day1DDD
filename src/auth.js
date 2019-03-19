@@ -1,6 +1,6 @@
 import { auth, usersRef } from './firebase.js';
 
-//const options = { skipAuth : true };
+const options = { skipAuth : true };
 
 const ui = new firebaseui.auth.AuthUI(auth);
 
@@ -10,7 +10,7 @@ ui.start('#firebase-auth-container', {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID
     ],
 
-    signInSuccessUrl: '/favorites.html',
+    signInSuccessUrl: '/quiz.html',
 
     credentialHelper: firebaseui.auth.CredentialHelper.NONE,
     callbacks: {
@@ -20,7 +20,8 @@ ui.start('#firebase-auth-container', {
                 .set({
                     uid: user.uid,
                     displayName: user.displayName,
-                    photoURL: user.photoURL
+                    photoURL: user.photoURL,
+                    takenQuiz: false
                 });
             return true;
         }
