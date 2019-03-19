@@ -24,14 +24,13 @@ quizForm.addEventListener('submit', event => {
         cuisine: quizFormData.get('cuisine'),
         dogName: quizFormData.get('dog-name'),
     };
-    const quizResult = evaluateQuiz(answers);
 
-    console.log(quizResult);
+    const quizResult = evaluateQuiz(answers);
 
     auth.onAuthStateChanged(user => {
         const userId = usersRef.child(user.uid);
         userId.update({
-            takenQuiz: true
+            quizColor: quizResult
         });
     });
 });

@@ -21,7 +21,7 @@ ui.start('#firebase-auth-container', {
                     uid: user.uid,
                     displayName: user.displayName,
                     photoURL: user.photoURL,
-                    takenQuiz: false
+                    quizColor: null
                 });
             return true;
         }

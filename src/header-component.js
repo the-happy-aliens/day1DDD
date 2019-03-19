@@ -1,4 +1,4 @@
-// import { auth } from "./firebase.js";
+import { auth } from "./firebase.js";
 
 export function makeHeader() {
     const html = /*html*/`
@@ -11,11 +11,12 @@ export function makeHeader() {
     return template.content;
 }
 
-export function makeProfile() {
+export function makeProfile(user) {
+    const avatar = user.photoURL || './assets/default-avatar.png';
     const html = /*html*/`
         <div class="profile">
-            <img src="" alt="Avatar of">
-            <span>--User Name--</span>
+            <img src="${avatar}" alt="Avatar of ${user.displayName}">
+            <span>${user.displayName}</span>
             <button>Sign Out</button>
         </div>
     `;
