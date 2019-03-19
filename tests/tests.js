@@ -1,3 +1,3 @@
 import './html-equal.js';
-import './header-component.test.js';
-//const test = QUnit.test;
+// import './header-component.test.js';
+import './quiz.test.js';
