@@ -53,5 +53,6 @@ colorSchemeGenerator.addEventListener('submit', event => {
             const colors = createColorArray(body);
             colors.unshift(color);
             loadColorDisplay(colors);
+            console.log(colors);
         });
 });
