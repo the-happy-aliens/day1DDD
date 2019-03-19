@@ -321,6 +321,16 @@ test('evaluate scorecard correctly', assert => {
     assert.equal(result, expected);
 });
 
+test('evaluate scorecard correctly with two highest numbers', assert => {
+    // arrange
+    const scorecard = { blue: 0, red: 1, black: 3, green: 3, yellow: 2, orange: 0, pink: 2, purple: 0, gray: 1, turquoise: 0 };
+    const expected = 'random';
+    // act
+    const result = evaluateScorecard(scorecard);
+    // assert
+    assert.equal(result, expected);
+});
+
 test('given answers return user\'s color', assert => {
     // arrange
     const answers = {
