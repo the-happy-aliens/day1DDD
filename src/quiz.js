@@ -1,4 +1,5 @@
 import { usersRef, auth } from './firebase.js';
+import evaluateQuiz from './quiz-component.js';
 
 const quizForm = document.getElementById('color-quiz');
 const numberChoice = document.getElementById('number-choice');
@@ -24,7 +25,9 @@ quizForm.addEventListener('submit', event => {
         dogName: quizFormData.get('dog-name'),
     };
     const quizResult = evaluateQuiz(answers);
-    
+
+    console.log(quizResult);
+
     auth.onAuthStateChanged(user => {
         const userId = usersRef.child(user.uid);
         userId.update({

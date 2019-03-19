@@ -1,4 +1,4 @@
-import { auth } from "./firebase";
+// import { auth } from "./firebase.js";
 
 export function makeHeader() {
     const html = /*html*/`
@@ -23,15 +23,15 @@ export function makeProfile() {
     template.innerHTML = html;
     return template.content;
 }
-function loadHeader() {
-    const dom = makeHeader();
-    const header = dom.querySelector('section');
-    headerContainer.appendChild(dom);
+// function loadHeader() {
+//     const dom = makeHeader();
+//     const header = dom.querySelector('section');
+//     headerContainer.appendChild(dom);
 
-    auth.onAuthStateChanged(user => {
-        if(user) {
-            const userDom = makeProfile(user);
-            const signOutButton = userDom.querySelector('button');
-        }
-    })
-}
+//     auth.onAuthStateChanged(user => {
+//         if(user) {
+//             const userDom = makeProfile(user);
+//             const signOutButton = userDom.querySelector('button');
+//         }
+//     })
+// }
