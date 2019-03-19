@@ -10,7 +10,7 @@ ui.start('#firebase-auth-container', {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID
     ],
 
-    signInSuccessUrl: '/home.html',
+    signInSuccessUrl: '/favorites.html',
 
     credentialHelper: firebaseui.auth.CredentialHelper.NONE,
     callbacks: {
