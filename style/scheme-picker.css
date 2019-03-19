@@ -1,0 +1,23 @@
+#color-container {
+    display: flex;
+}
+
+.color-display {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.color-display p {
+    margin: 0;
+}
+
+.color-display div {
+    width: 100%;
+    align-self: center;
+    flex-grow: 1;
+}

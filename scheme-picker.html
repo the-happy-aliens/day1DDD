@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style/scheme-picker.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+
+    <title>Scheme Picker Page</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+            <form id="color-scheme-generator">
+                    <label for="color-picker">Choose your seed color:</label>
+                    <input type="color" name="color-picker" id="color-picker" value="#24B1E0">
+                    <label for="scheme-type">Choose a scheme:</label>
+                    <select name="scheme-type" id="scheme-type" required>
+                        <option value="" disabled selected>--Please choose an option--</option>
+                        <option value="monochrome">Monochrome</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
+                    </select>
+                    <label for="scheme-color-amount" hidden>Amount of colors in scheme:</label>
+                    <input type="number" name="scheme-color-amount" id="scheme-color-amount" value="5" hidden>
+                    <button>Give me a scheme!</button>
+                </form>
+                <button id="random-color-seed">Random seed color</button>
+                <section id="color-container"></section>
+    </main>
+    <script type="module" src="./src/scheme-picker.js"></script>
+</body>
+</html>
