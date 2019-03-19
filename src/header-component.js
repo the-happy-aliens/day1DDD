@@ -24,15 +24,24 @@ export function makeProfile(user) {
     template.innerHTML = html;
     return template.content;
 }
-// function loadHeader() {
-//     const dom = makeHeader();
-//     const header = dom.querySelector('section');
-//     headerContainer.appendChild(dom);
 
-//     auth.onAuthStateChanged(user => {
-//         if(user) {
-//             const userDom = makeProfile(user);
-//             const signOutButton = userDom.querySelector('button');
-//         }
-//     })
-// }
+const headerContainer = document.getElementById('header-container');
+
+export default function loadHeader() {
+    const dom = makeHeader();
+    const header = dom.querySelector('header');
+    headerContainer.appendChild(dom);
+
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            const userDom = makeProfile(user);
+            const signOutButton = userDom.querySelector('button');
+            signOutButton.addEventListener('click', () => {
+                auth.signOut();
+            });
+            header.appendChild(userDom);
+        } else {
+            window.location = './auth.html';
+        }
+    });
+}

@@ -1,9 +1,12 @@
 import { usersRef, auth } from './firebase.js';
 import evaluateQuiz from './quiz-component.js';
+import loadHeader from './header-component.js';
 
 const quizForm = document.getElementById('color-quiz');
 const numberChoice = document.getElementById('number-choice');
 const numberDisplay = document.getElementById('number-chosen');
+
+loadHeader();
 
 numberChoice.addEventListener('change', event => {
     event.preventDefault();
