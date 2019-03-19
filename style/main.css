@@ -6,10 +6,13 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.fancy-header {
+h1 {
     font-family: 'Josefin Sans', sans-serif; 
     font-weight: 600;
     font-style: italic;
+    font-size: 3.5em;
+}
+.fancy-header {
     font-size: 5em;
     letter-spacing: .2em;
     text-align: center;

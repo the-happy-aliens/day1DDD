@@ -1,15 +1,16 @@
 ul {
     list-style: none;
     padding: 0;
+    background-color: white;
 }
 
 li {
     display: inline-block;
-    border: 1px solid black;
     padding: 5px;
     width: 150px;
     height: 175px;
     overflow: hidden;
+    background-color: white;
 }
 
 .color-block {
