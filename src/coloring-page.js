@@ -3,8 +3,6 @@ import loadHeader from './header-component.js';
 import littleDude from '../assets/little-dude.js';
 // import weirdLady from '../assets/weird-lady.js';
 
-const head = document.getElementById('head');
-
 const coloringContainer = document.getElementById('coloring-container');
 
 loadHeader();
@@ -46,11 +44,3 @@ polygons.forEach(polygon => {
 });
 
 coloringContainer.appendChild(littleDudeDom);
-
-// const color = 'hex code';
-
-// head.addEventListener('click', () => {
-//     head.setAttribute('fill', '#c842f4');
-// });
-
-// littleGuyFillSvg();
