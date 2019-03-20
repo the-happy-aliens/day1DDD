@@ -11,6 +11,8 @@ const schemeTypeSelect = document.getElementById('scheme-type');
 const schemeColorAmount = document.getElementById('scheme-color-amount');
 const quizColorSpan = document.getElementById('quiz-color');
 const quizHexSpan = document.getElementById('quiz-hex');
+const instructions = document.getElementById('instructions');
+const quizInstructions = document.getElementById('quiz-instructions');
 
 loadHeader();
 
@@ -23,7 +25,8 @@ if(window.location.hash === '#fromQuiz=true') {
         quizColorRef.once('value')
             .then(snapshot => {
                 const quizResult = snapshot.val();
-                console.log(quizResult.quizColor);
+                quizInstructions.hidden = false;
+                instructions.hidden = true;
                 quizColorSpan.textContent = quizResult.quizColor;
                 quizHexSpan.textContent = quizResult.quizHex;
                 colorSeed.value = '#' + quizResult.quizHex;
@@ -71,6 +74,8 @@ schemeTypeSelect.addEventListener('change', () => {
 
 colorSchemeGenerator.addEventListener('submit', event => {
     event.preventDefault();
+    quizInstructions.hidden = true;
+    instructions.hidden = false;
     const colorSchemeGeneratorData = new FormData(colorSchemeGenerator);
     const color = colorSchemeGeneratorData.get('color-picker').slice(1);
     const schemeOptions = {
