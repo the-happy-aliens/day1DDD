@@ -1,3 +1,15 @@
 #coloring-container {
     background-color: white;
+    height: 80%;
+    width: 80%;
+}
+
+#palette-container {
+    display: flex;
+}
+
+.palette-color {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
 }
