@@ -1,22 +1,41 @@
-ul {
-    list-style: none;
-    padding: 0;
-    background-color: white;
-}
-
-li {
-    display: inline-block;
-    padding: 5px;
-    width: 150px;
-    height: 175px;
-    overflow: hidden;
-    background-color: white;
-}
-
-.color-block {
+/* .color-block {
     width: 30px;
     height: 75px;
     background-color: black;
     display: inline-block;
     margin: -2px;
+} */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scheme-display {
+    display: flex;
+    flex-direction: row wrap;
+    border: solid 2px white;
+    width: 100%;
+    padding: 50px;
+}
+
+.color-display {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-shrink: 1;
+}
+
+.color-display p {
+    margin: 0;
+}
+
+.color-display div {
+    width: 100%;
+    align-self: center;
+    flex-grow: 1;
 }
