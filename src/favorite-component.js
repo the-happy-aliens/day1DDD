@@ -1,3 +1,5 @@
+import { auth, usersFavoriteColorSchemesRef  } from './firebase.js';
+
 export function createSchemeLi(favorite) {
     const html = /*html*/ `
         <li class="scheme-display">
@@ -28,3 +30,5 @@ export function createSchemeLi(favorite) {
     template.innerHTML = html;
     return template.content;
 }
+
+
