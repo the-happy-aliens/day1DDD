@@ -1,8 +1,8 @@
-import { auth, usersFavoriteColorSchemesRef  } from './firebase.js';
+import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
 import loadHeader from './header-component.js';
+import loadFavoriteSchemes, { convertObjectToArray } from './favorite-component.js';
 
 loadHeader();
-
 
 auth.onAuthStateChanged(user => {
     const userId = user.uid;
@@ -10,7 +10,8 @@ auth.onAuthStateChanged(user => {
     userFavoritesRef.once('value')
         .then(snapshot => {
             const data = snapshot.val();
-            console.log(data);
+            const favoriteSchemesIds = Object.keys(data);
+            const favoriteSchemes = convertObjectToArray(data);
+            loadFavoriteSchemes(favoriteSchemes, favoriteSchemesIds);
         });
 });
-

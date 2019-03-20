@@ -1,11 +1,10 @@
+import { convertObjectToArray } from '../src/favorite-component.js';
+
 const test = QUnit.test;
 
 QUnit.module('object to array tests');
 
-function convertObjectToArray(data) {
-    const keys = Object.keys(data);
-    return keys.map(key => data[key]);
-}
+
 
 test('object will be converted to array of objects', assert => {
     //arrange
