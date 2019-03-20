@@ -36,4 +36,6 @@ quizForm.addEventListener('submit', event => {
             quizColor: quizResult
         });
     });
+    window.location = '/scheme-picker.html#fromQuiz=true';
+
 });

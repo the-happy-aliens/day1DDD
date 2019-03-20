@@ -2,8 +2,25 @@ import loadHeader from './header-component.js';
 import loadColorDisplay from './scheme/color-display-component.js';
 import { createSchemeUrl } from './scheme/create-scheme-url.js';
 import { createColorArray } from './scheme/create-color-array.js';
+import { auth, usersRef } from './firebase.js';
 
 loadHeader();
+if(window.location.hash === '#fromQuiz=true') {
+    console.log('fromQuiz');
+
+    auth.onAuthStateChanged(user => {
+        const userId = user.uid;
+        const userProfile = usersRef.child(userId);
+        const quizColorRef = userProfile.child('quizColor');
+        quizColorRef.once('value')
+            .then(snapshot => {
+                const quizColor = snapshot.val();
+                console.log(quizColor);
+            });
+
+    });
+}
+
 
 const colorSchemeGenerator = document.getElementById('color-scheme-generator');
 const randomColorSeedButton = document.getElementById('random-color-seed');

@@ -17,6 +17,15 @@
 <body>
     <div id="header-container"></div>
     <main>
+            <p id="instructions">Follow these steps to create your colorful life! 
+                <ol>
+                    <li>Choose your seed color by clicking on the colored box or click random seed color button!</li>
+                    <li>Choose type of scheme from our dropdown menu</li>
+                    <li>Generate a scheme by clicking give me a scheme button</li>
+                    <li>Click heart icon to save the scheme to your favorites!</li>
+                </ol>
+            </p>
+            <p id="quiz-instructions"></p>
             <form id="color-scheme-generator">
                     <label for="color-picker">Choose your seed color:</label>
                     <input type="color" name="color-picker" id="color-picker" value="#24B1E0">
@@ -31,7 +40,7 @@
                         <option value="quad">Quad</option>
                     </select>
                     <label for="scheme-color-amount" hidden>Amount of colors in scheme:</label>
-                    <input type="number" name="scheme-color-amount" id="scheme-color-amount" value="5" hidden>
+                    <input type="number" name="scheme-color-amount" id="scheme-color-amount" value="5" max="10" hidden>
                     <button>Give me a scheme!</button>
                 </form>
                 <button id="random-color-seed">Random seed color</button>
