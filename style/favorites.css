@@ -9,19 +9,21 @@
 ul {
     list-style: none;
     padding: 0;
+    margin: 10%;
 }
 
 .scheme-display {
     display: flex;
     flex-direction: row wrap;
     border: solid 2px white;
-    width: 100%;
+    width: 90%;
     padding: 50px;
+    /* margin: 10%; */
 }
 
 .color-display {
     height: 200px;
-    width: 200px;
+    width: 100%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;

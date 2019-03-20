@@ -34,10 +34,15 @@ const favoritesContainer = document.getElementById('favorites-container');
 export default function loadFavoriteSchemes(schemes, favoriteSchemeIds) {
     schemes.forEach((scheme, index) => {
         const favoriteDom = createSchemeLi(scheme);
+        const li = favoriteDom.querySelector('li');
+        scheme.scheme.forEach(color => {
+            const colorDom = createColorSection(color);
+            li.appendChild(colorDom);
+        });
         const favoriteHeart = favoriteDom.querySelector('.favorite-heart');
         const userId = auth.currentUser.uid;
         const usersFavoritesRef = usersFavoriteColorSchemesRef.child(userId);
-        const favoriteId = favoriteSchemeIds[index]
+        const favoriteId = favoriteSchemeIds[index];
         const userFavoriteSchemeRef = usersFavoritesRef.child(favoriteId);
         userFavoriteSchemeRef.once('value')
             .then(snapshot => {
