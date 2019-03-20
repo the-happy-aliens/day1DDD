@@ -9,4 +9,5 @@ export const app = firebase.initializeApp(config);
 export const auth = firebase.auth();
 const db = firebase.database();
 export const usersRef = db.ref('users');
+export const usersFavoriteColorSchemesRef = db.ref('users-favorite-color-schemes');
 
