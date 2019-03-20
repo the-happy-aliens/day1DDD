@@ -63,13 +63,12 @@ colorSchemeGenerator.addEventListener('submit', event => {
         count: Number(colorSchemeGeneratorData.get('scheme-color-amount'))
     };
     const url = createSchemeUrl(schemeOptions);
-    loadColorDisplay(schemeOptions.originalColor);
+
     fetch(url)
         .then(response => response.json())
         .then(body => {
             const colors = createColorArray(body);
             colors.unshift(color);
-            loadColorDisplay(colors);
-            console.log(colors);
+            loadColorDisplay(colors, schemeOptions);
         });
 });

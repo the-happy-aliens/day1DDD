@@ -23,13 +23,14 @@ function createFavoriteHeart() {
 
 const colorContainer = document.getElementById('color-container');
 
-export default function loadColorDisplay(colors) {
+export default function loadColorDisplay(colors, schemeOptions) {
     clearColorDisplay();
     const favoriteDom = createFavoriteHeart();
     const favoriteHeart = favoriteDom.querySelector('.favorite-heart');
     const userId = auth.currentUser.uid;
     const usersFavoritesRef = usersFavoriteColorSchemesRef.child(userId);
-    const userFavoriteSchemeRef = usersFavoritesRef.child(colors[0]);
+    const favoriteId = schemeOptions.originalColor[0] + schemeOptions.scheme + schemeOptions.count;
+    const userFavoriteSchemeRef = usersFavoritesRef.child(favoriteId);
     userFavoriteSchemeRef.once('value')
         .then(snapshot => {
             const value = snapshot.val();
