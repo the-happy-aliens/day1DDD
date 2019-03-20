@@ -33,7 +33,7 @@ quizForm.addEventListener('submit', event => {
     auth.onAuthStateChanged(user => {
         const userId = usersRef.child(user.uid);
         userId.update({
-            quizColor: quizResult
+            quizResult: quizResult
         });
     });
     window.location = '/scheme-picker.html#fromQuiz=true';

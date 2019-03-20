@@ -17,15 +17,22 @@
 <body>
     <div id="header-container"></div>
     <main>
-            <p id="instructions">Follow these steps to create your colorful life! 
-                <ol>
-                    <li>Choose your seed color by clicking on the colored box or click random seed color button!</li>
-                    <li>Choose type of scheme from our dropdown menu</li>
-                    <li>Generate a scheme by clicking give me a scheme button</li>
-                    <li>Click heart icon to save the scheme to your favorites!</li>
-                </ol>
-            </p>
-            <p id="quiz-instructions"></p>
+        <ol id="instructions" hidden>
+            <p> Follow these steps to create your colorful life! </p>
+            <li>Choose your seed color by clicking on the colored box or click random seed color button!</li>
+            <li>Choose type of scheme from our dropdown menu</li>
+            <li>Generate a scheme by clicking give me a scheme button</li>
+            <li>Click heart icon to save the scheme to your favorites!</li>
+        </ol>
+        <ol id="quiz-instructions" hidden>
+            <p></p>
+            <li>Your color from the quiz was <span id="quiz-color"></span>. Its hex value is <span id="quiz-hex"></span></li>
+            <li>We have supplied a scheme created from your quiz result color. If you like it- click the heart icon to save as a favorite!</li>
+            <li>Next- You can choose to generate a new scheme with personalized attributes (seed color, scheme mode, and number of panels!)</li>
+            <li>Can't decide on a new seed color? Click our random seed color button to get started!</li>
+            <li>Generate a scheme by clicking give me a scheme button</li>
+            <li>Click heart icon to save the scheme to your favorites!</li>
+        </ol>
             <form id="color-scheme-generator">
                     <label for="color-picker">Choose your seed color:</label>
                     <input type="color" name="color-picker" id="color-picker" value="#24B1E0">

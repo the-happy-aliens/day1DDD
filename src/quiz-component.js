@@ -335,5 +335,8 @@ export default function evaluateQuiz(answers) {
     scoreNumber(answers.number, scorecard);
     scoreCuisine(answers.cuisine, scorecard);
     scoreDogName(answers.dogName, scorecard);
-    return convertColorToHex(evaluateScorecard(scorecard));
+    return {
+        quizHex: convertColorToHex(evaluateScorecard(scorecard)),
+        quizColor: evaluateScorecard(scorecard)
+    };
 }

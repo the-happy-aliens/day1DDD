@@ -37,11 +37,11 @@ test('given answers return user\'s color', assert => {
         cuisine: 'thai',
         dogName: 'spot',
     };
-    const expected = '556B2F';
+    const expected = { quizHex: '556B2F', quizColor: 'green' };
     // act
     const result = evaluateQuiz(answers);
     // assert
-    assert.equal(result, expected);
+    assert.deepEqual(result, expected);
 });
 
 test('convert color string to hex', assert => {
