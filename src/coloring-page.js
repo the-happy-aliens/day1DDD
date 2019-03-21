@@ -1,15 +1,29 @@
 import littleGuyFillSvg from './coloring/little-guy.js';
 import loadHeader from './header-component.js';
 import littleDude from '../assets/little-dude.js';
-// import weirdLady from '../assets/weird-lady.js';
-
+import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
+import { loadSchemesList } from './coloring-component.js';
+import { convertObjectToArray } from './favorite-component.js';
 const coloringContainer = document.getElementById('coloring-container');
 
 loadHeader();
 
 let coloringColor;
 
+auth.onAuthStateChanged(user => {
+    const userId = user.uid;
+    const userFavoritesRef = usersFavoriteColorSchemesRef.child(userId);
+    userFavoritesRef.once('value')
+        .then(snapshot => {
+            const data = snapshot.val();
+            const favoriteSchemesIds = Object.keys(data);
+            const favoriteSchemes = convertObjectToArray(data);
+            loadSchemesList(favoriteSchemesIds, favoriteSchemes);
+        });
+});
+
 const colors = document.querySelectorAll('.palette-color');
+console.log(colors);
 colors.forEach(color => {
     color.addEventListener('click', () => {
         console.log(color.style.backgroundColor);

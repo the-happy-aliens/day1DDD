@@ -1,3 +1,15 @@
+#top-container {
+    display: flex;
+}
+
+#schemes-list {
+    list-style-type: none;
+}
+
+#schemes-list li:hover {
+    background-color: darkgray;
+}
+
 #coloring-container {
     background-color: white;
     height: 80%;

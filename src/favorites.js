@@ -12,6 +12,7 @@ auth.onAuthStateChanged(user => {
             const data = snapshot.val();
             const favoriteSchemesIds = Object.keys(data);
             const favoriteSchemes = convertObjectToArray(data);
+            console.log(favoriteSchemesIds);
             loadFavoriteSchemes(favoriteSchemes, favoriteSchemesIds);
         });
 });
