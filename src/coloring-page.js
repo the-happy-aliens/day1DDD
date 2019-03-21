@@ -27,6 +27,14 @@ const template = document.createElement('template');
 template.innerHTML = littleDude;
 const littleDudeDom = template.content;
 
+const rects = littleDudeDom.querySelectorAll('rect');
+
+rects.forEach(rect => {
+    rect.addEventListener('click', () => {
+        rect.setAttribute('fill', coloringColor);
+    });
+});
+
 const paths = littleDudeDom.querySelectorAll('path');
 
 paths.forEach(path => {

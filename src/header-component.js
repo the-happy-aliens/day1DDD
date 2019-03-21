@@ -3,7 +3,9 @@ import { auth } from "./firebase.js";
 export function makeHeader() {
     const html = /*html*/`
         <header>
+        <div id="header">
             <h1 class="fancy-header">PRISMATIC</h1>
+        </div>
         </header>
     `;
     const template = document.createElement('template');
