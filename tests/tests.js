@@ -6,3 +6,4 @@ import './coloring.test.js';
 import './favorite-component.test.js';
 import './object-array.test.js';
 import './coloring-component.test.js';
+import './thumbnail-component.test.js';

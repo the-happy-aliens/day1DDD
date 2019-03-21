@@ -1,5 +1,5 @@
 import loadHeader from './header-component.js';
-import littleDude from '../assets/little-dude.js';
+import coloringImages from '../assets/svg-list.js';
 import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
 import { loadSchemesList } from './coloring-component.js';
 import { convertObjectToArray } from './favorite-component.js';
@@ -23,38 +23,62 @@ auth.onAuthStateChanged(user => {
         });
 });
 
-const template = document.createElement('template');
-template.innerHTML = littleDude;
-const littleDudeDom = template.content;
 
-const rects = littleDudeDom.querySelectorAll('rect');
 
-rects.forEach(rect => {
-    rect.addEventListener('click', () => {
-        rect.setAttribute('fill', coloringColor);
+
+
+const svgThumbOne = document.getElementById('one');
+const svgThumbTwo = document.getElementById('two');
+
+svgThumbOne.addEventListener('click', () => {
+    clearColoringContainer();
+    const template = document.createElement('template');
+    template.innerHTML = coloringImages[0];
+    const coloringDom = template.content;
+    coloringContainer.appendChild(coloringDom);
+
+    const rects = coloringDom.querySelectorAll('rect');
+
+    rects.forEach(rect => {
+        rect.addEventListener('click', () => {
+            rect.setAttribute('fill', coloringColor);
+        });
+    });
+
+    const paths = coloringDom.querySelectorAll('path');
+
+    paths.forEach(path => {
+        path.addEventListener('click', () => {
+            path.setAttribute('fill', coloringColor);
+        });
+    });
+    const circles = coloringDom.querySelectorAll('circle');
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', () => {
+            circle.setAttribute('fill', coloringColor);
+        });
+    });
+    const polygons = coloringDom.querySelectorAll('polygon');
+
+    polygons.forEach(polygon => {
+        polygon.addEventListener('click', () => {
+            polygon.setAttribute('fill', coloringColor);
+        });
     });
 });
 
-const paths = littleDudeDom.querySelectorAll('path');
-
-paths.forEach(path => {
-    path.addEventListener('click', () => {
-        path.setAttribute('fill', coloringColor);
-    });
-});
-const circles = littleDudeDom.querySelectorAll('circle');
-
-circles.forEach(circle => {
-    circle.addEventListener('click', () => {
-        circle.setAttribute('fill', coloringColor);
-    });
-});
-const polygons = littleDudeDom.querySelectorAll('polygon');
-
-polygons.forEach(polygon => {
-    polygon.addEventListener('click', () => {
-        polygon.setAttribute('fill', coloringColor);
-    });
+svgThumbTwo.addEventListener('click', () => {
+    clearColoringContainer();
+    const template = document.createElement('template');
+    template.innerHTML = coloringImages[1];
+    const coloringDom = template.content;
+    coloringContainer.appendChild(coloringDom);
 });
 
-coloringContainer.appendChild(littleDudeDom);
+
+function clearColoringContainer() {
+    while(coloringContainer.children.length > 0) {
+        coloringContainer.lastElementChild.remove();
+    }
+}
