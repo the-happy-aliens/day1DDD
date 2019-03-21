@@ -1,12 +1,13 @@
 import loadHeader from './header-component.js';
 import coloringImages from '../assets/svg-list.js';
-import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
+import { auth, usersFavoriteColorSchemesRef, usersFavoriteColoredPicturesRef } from './firebase.js';
 import { loadSchemesList } from './coloring-component.js';
 import { convertObjectToArray } from './favorite-component.js';
 import { createThumbnailDiv } from './thumbnail-component.js';
 
 const thumbnailContainer = document.getElementById('thumbnail-container');
 const coloringContainer = document.getElementById('coloring-container');
+const saveButton = document.getElementById('save-button');
 
 loadHeader();
 
@@ -85,3 +86,19 @@ function clearColoringContainer() {
         coloringContainer.lastElementChild.remove();
     }
 }
+
+saveButton.addEventListener('click', () => {
+    const pictureToBeSaved = document.querySelector('svg');
+    console.log(pictureToBeSaved);
+    const userId = auth.currentUser.uid;
+    const usersFavoriteRef = usersFavoriteColoredPicturesRef.child(userId);
+    const pictureId = pictureToBeSaved.id + Math.floor(Math.random() * 10000);
+    const userFavoritePictureRef = usersFavoriteRef.child(pictureId);
+    userFavoritePictureRef.once('value')
+        .then(() => {
+            userFavoritePictureRef.set({
+                id: pictureId,
+                picture: pictureToBeSaved.outerHTML
+            });
+        });
+});

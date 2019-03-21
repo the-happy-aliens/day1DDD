@@ -10,4 +10,4 @@ export const auth = firebase.auth();
 const db = firebase.database();
 export const usersRef = db.ref('users');
 export const usersFavoriteColorSchemesRef = db.ref('users-favorite-color-schemes');
-
+export const usersFavoriteColoredPicturesRef = db.ref('users-favorite-colored-pictures');
