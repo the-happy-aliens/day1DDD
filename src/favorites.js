@@ -4,15 +4,21 @@ import loadFavoriteSchemes, { convertObjectToArray } from './favorite-component.
 
 loadHeader();
 
+const noFavesPrompt = document.getElementById('no-favs');
+
 auth.onAuthStateChanged(user => {
     const userId = user.uid;
     const userFavoritesRef = usersFavoriteColorSchemesRef.child(userId);
     userFavoritesRef.once('value')
         .then(snapshot => {
             const data = snapshot.val();
-            const favoriteSchemesIds = Object.keys(data);
-            const favoriteSchemes = convertObjectToArray(data);
-            console.log(favoriteSchemesIds);
-            loadFavoriteSchemes(favoriteSchemes, favoriteSchemesIds);
+            if(!data) {
+                noFavesPrompt.hidden = false;
+            } else {
+                noFavesPrompt.hidden = true;
+                const favoriteSchemesIds = Object.keys(data);
+                const favoriteSchemes = convertObjectToArray(data);
+                loadFavoriteSchemes(favoriteSchemes, favoriteSchemesIds);
+            }
         });
 });

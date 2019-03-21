@@ -58,7 +58,6 @@ export default function loadThumbnails(paths, coloringImages) {
             paths.forEach(path => {
                 path.addEventListener('click', () => {
                     path.setAttribute('fill', coloringColor);
-                    console.log('click');
                 });
             });
             const circles = coloringDom.querySelectorAll('circle');
@@ -89,7 +88,6 @@ function clearColoringContainer() {
 
 saveButton.addEventListener('click', () => {
     const pictureToBeSaved = document.querySelector('svg');
-    console.log(pictureToBeSaved);
     const userId = auth.currentUser.uid;
     const usersFavoriteRef = usersFavoriteColoredPicturesRef.child(userId);
     const pictureId = pictureToBeSaved.id + Math.floor(Math.random() * 10000);
