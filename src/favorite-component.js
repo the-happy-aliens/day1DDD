@@ -1,9 +1,17 @@
 import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
 
-export function createSchemeLi() {
+export function createSchemeLi(schemeName) {
     const html = /*html*/ `
         <li class="scheme-display">
-            <div><span class="favorite-heart">♡</span></div>
+            <div id="upper-bar">
+                <span class="favorite-heart">♡</span>
+                <span id="scheme-name">${schemeName}</span>
+                <form>
+                    Rename: <input type="text" name="new-name">
+                    <button>Save</button>
+                </form>
+            </div>
+            <div id="scheme-colors"></div>
         </li>
     `;
     const template = document.createElement('template');
@@ -33,11 +41,21 @@ const favoritesContainer = document.getElementById('favorites-container');
 
 export default function loadFavoriteSchemes(schemes, favoriteSchemeIds) {
     schemes.forEach((scheme, index) => {
-        const favoriteDom = createSchemeLi(scheme);
-        const li = favoriteDom.querySelector('li');
+        const schemeName = scheme.customName || favoriteSchemeIds[index];
+        const favoriteDom = createSchemeLi(schemeName);
+        const schemeColors = favoriteDom.getElementById('scheme-colors');
         scheme.scheme.forEach(color => {
             const colorDom = createColorSection(color);
-            li.appendChild(colorDom);
+            schemeColors.appendChild(colorDom);
+        });
+        const schemeNameForm = favoriteDom.querySelector('form');
+        schemeNameForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const schemeNameFormData = new FormData(schemeNameForm);
+            const newName = schemeNameFormData.get('new-name');
+            userFavoriteSchemeRef.update({
+                customName: newName
+            });
         });
         const favoriteHeart = favoriteDom.querySelector('.favorite-heart');
         const userId = auth.currentUser.uid;
