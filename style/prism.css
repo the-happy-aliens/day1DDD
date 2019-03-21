@@ -1,0 +1,58 @@
+#prism-list {
+    padding: 0;
+    list-style: none;
+    transition: 2s;
+}
+
+a {
+    color: white;
+}
+
+body {
+    background: radial-gradient(circle at center, #aff69e 0%, #9ed8f6 10%, #f69ee5 20%, #d4980e 30%, #daa93a 40%, #3eda3a 50%, #b9ed94 60%);
+  background-size: 1000% 1000%;
+  
+  -webkit-animation: backgroundGradient 30s ease infinite;
+  -moz-animation: backgroundGradient 30s ease infinite;
+  animation: backgroundGradient 30s ease infinite;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .prism-box {
+    height: 300px;
+    width: 300px;
+  }
+  
+  @-webkit-keyframes backgroundGradient {
+      0%{background-position:70% 0%}
+      50%{background-position:31% 100%}
+      100%{background-position:70% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:70% 0%}
+      50%{background-position:31% 100%}
+      100%{background-position:70% 0%}
+  }
+  @keyframes AnimationName { 
+      0%{background-position:70% 0%}
+      50%{background-position:31% 100%}
+      100%{background-position:70% 0%}
+  }
+  
+  .prism {
+    transform-origin: center center;
+    animation:
+      goRotate 10s infinite linear;
+  }
+  
+  @keyframes goRotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }

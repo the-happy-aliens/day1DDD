@@ -3,6 +3,7 @@ import coloringImages from '../assets/svg-list.js';
 import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
 import { loadSchemesList } from './coloring-component.js';
 import { convertObjectToArray } from './favorite-component.js';
+import { createThumbnailDiv } from './thumbnail-component.js';
 
 const thumbnailContainer = document.getElementById('thumbnail-container');
 const coloringContainer = document.getElementById('coloring-container');
@@ -32,15 +33,6 @@ const paths = [
     '../assets/weird-lady.svg',
 ];
 loadThumbnails(paths, coloringImages);
-
-export function createThumbnailDiv(path) {
-    const html = /*html*/ `
-        <div class="thumbnail"><img src="${path}"></div>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 export default function loadThumbnails(paths, coloringImages) {
     paths.forEach((path, index) => {
