@@ -1,4 +1,4 @@
-import littleGuyFillSvg from './coloring/little-guy.js';
+// import littleGuyFillSvg from './coloring/little-guy.js';
 import loadHeader from './header-component.js';
 import littleDude from '../assets/little-dude.js';
 import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
