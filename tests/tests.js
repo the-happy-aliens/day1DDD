@@ -7,3 +7,4 @@ import './favorite-component.test.js';
 import './object-array.test.js';
 import './coloring-component.test.js';
 import './thumbnail-component.test.js';
+import './saved-picture.test.js';

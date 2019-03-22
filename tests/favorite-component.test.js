@@ -44,5 +44,3 @@ test('function will create color section for each color in array', assert => {
     assert.htmlEqual(result, expected);
 
 });
-
-

@@ -97,3 +97,23 @@ export default function loadFavoriteSchemes(schemes, favoriteSchemeIds) {
         favoritesContainer.appendChild(favoriteDom);
     });
 }
+
+export function createSavedPictureLi(savedPicture) {
+    const html = /*html*/ `
+    <li>
+        ${savedPicture.picture}             
+    </li>
+    `;
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    return template.content;
+}
+
+const savedPicturesContainer = document.getElementById('saved-pictures-container');
+
+export function loadSavedPictures(savedPictures) {
+    savedPictures.forEach(savedPicture => {
+        const pictureDom = createSavedPictureLi(savedPicture);
+        savedPicturesContainer.appendChild(pictureDom);
+    });
+}

@@ -36,3 +36,9 @@ ul {
     align-self: center;
     flex-grow: 1;
 }
+
+#saved-pictures-container li {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}

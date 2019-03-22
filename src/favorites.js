@@ -1,6 +1,6 @@
-import { auth, usersFavoriteColorSchemesRef } from './firebase.js';
+import { auth, usersFavoriteColorSchemesRef, usersFavoriteColoredPicturesRef } from './firebase.js';
 import loadHeader from './header-component.js';
-import loadFavoriteSchemes, { convertObjectToArray } from './favorite-component.js';
+import loadFavoriteSchemes, { convertObjectToArray, loadSavedPictures } from './favorite-component.js';
 
 loadHeader();
 
@@ -20,5 +20,12 @@ auth.onAuthStateChanged(user => {
                 const favoriteSchemes = convertObjectToArray(data);
                 loadFavoriteSchemes(favoriteSchemes, favoriteSchemesIds);
             }
+        });
+    const userColoredPicturesRef = usersFavoriteColoredPicturesRef.child(userId);
+    userColoredPicturesRef.once('value')
+        .then(snapshot => {
+            const pictureData = snapshot.val();
+            const savedPictures = convertObjectToArray(pictureData);
+            loadSavedPictures(savedPictures);
         });
 });
