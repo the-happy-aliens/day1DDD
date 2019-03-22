@@ -1,5 +1,6 @@
 #color-container {
     display: flex;
+    justify-content: center;
 }
 
 .color-display {

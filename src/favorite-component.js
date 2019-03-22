@@ -56,6 +56,7 @@ export default function loadFavoriteSchemes(schemes, favoriteSchemeIds) {
             userFavoriteSchemeRef.update({
                 customName: newName
             });
+            window.alert('Saved!');
         });
         const favoriteHeart = favoriteDom.querySelector('.favorite-heart');
         const userId = auth.currentUser.uid;
