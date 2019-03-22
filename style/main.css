@@ -32,6 +32,22 @@ h2 {
     letter-spacing: .2em;
 }
 
+button {
+    font-family: 'Raleway', sans-serif;
+    box-shadow: none;
+    margin: 10px;
+}
+
+input {
+    font-family: 'Raleway', sans-serif;
+    box-shadow: none;
+    margin: 10px;
+}
+
+footer {
+    color: black;
+}
+
 .fancy-header {
     font-size: 5em;
     letter-spacing: .2em;
