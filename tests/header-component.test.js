@@ -20,7 +20,7 @@ test('make profile', assert => {
     const expected = /*html*/`
         <div class="profile">
             <img src="https://lh5.googleusercontent.com/-4CdOE15sL5w/AAAAAAAAAAI/AAAAAAAAA8M/0Y7ZON1htn8/photo.jpg" alt="Avatar of Laura Badgley">
-            <span>Laura Badgley</span>
+            <span id="profile-name">Laura Badgley</span>
             <button>Sign Out</button>
         </div>
     `;
@@ -38,7 +38,7 @@ test('make profile without photo', assert => {
     const expected = /*html*/`
         <div class="profile">
         <img src="./assets/default-avatar.png" alt="Avatar of Laura Badgley">
-            <span>Laura Badgley</span>
+        <span id="profile-name">Laura Badgley</span>
             <button>Sign Out</button>
         </div>
     `;

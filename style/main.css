@@ -38,8 +38,85 @@ h2 {
     text-align: center;
     color: #C4C4C4;
     -webkit-animation: colorchange 10s linear 0s infinite alternate;
+    -moz-animation: colorchange 10s linear 0s infinite alternate;
+    animation: colorchange 10s linear 0s infinite alternate;
 }
+
 @-webkit-keyframes colorchange {
+    0% {
+        color: #e2c81d;
+    }
+    10% {
+        color: #c3dd18;
+    }
+    20% {
+        color: #81dd17;
+    }
+    30% {
+        color: #16dd8d;
+    }
+    40% {
+        color: #13dbdb;
+    }
+    50% {
+        color: #117ad6;
+    }
+    60% {
+        color: #6031c6;
+    }
+    70% {
+        color: #d323e0;
+    }
+    80% {
+        color: #ff0586;
+    }
+    90% {
+        color: #e81f09;
+    }
+    100% {
+        color:#e06d08;
+    }
+
+}
+
+@-moz-keyframes colorchange {
+    0% {
+        color: #e2c81d;
+    }
+    10% {
+        color: #c3dd18;
+    }
+    20% {
+        color: #81dd17;
+    }
+    30% {
+        color: #16dd8d;
+    }
+    40% {
+        color: #13dbdb;
+    }
+    50% {
+        color: #117ad6;
+    }
+    60% {
+        color: #6031c6;
+    }
+    70% {
+        color: #d323e0;
+    }
+    80% {
+        color: #ff0586;
+    }
+    90% {
+        color: #e81f09;
+    }
+    100% {
+        color:#e06d08;
+    }
+
+}
+
+@keyframes colorchange {
     0% {
         color: #e2c81d;
     }

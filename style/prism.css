@@ -9,7 +9,7 @@ a {
 }
 
 body {
-    background: radial-gradient(circle at center, #aff69e 0%, #9ed8f6 10%, #f69ee5 20%, #d4980e 30%, #daa93a 40%, #3eda3a 50%, #b9ed94 60%);
+  background: radial-gradient(circle at center, #aff69e 0%, #9ed8f6 10%, #f69ee5 20%, #d4980e 30%, #daa93a 40%, #3eda3a 50%, #b9ed94 60%);
   background-size: 1000% 1000%;
   
   -webkit-animation: backgroundGradient 30s ease infinite;
