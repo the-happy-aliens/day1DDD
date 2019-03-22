@@ -25,3 +25,8 @@ header img {
     width: 32px;
     border-radius: 100%;
 }
+
+#profile-name {
+    color: white;
+    text-shadow: -3px 3px 2px #000000;
+}

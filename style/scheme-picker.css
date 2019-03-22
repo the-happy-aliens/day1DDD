@@ -22,3 +22,10 @@
     flex-grow: 1;
 }
 
+#scheme-type {
+    font-family: 'Raleway', sans-serif;
+}
+
+#scheme-type > option {
+    font-family: 'Raleway', sans-serif;
+}

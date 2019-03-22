@@ -1,34 +1,72 @@
-section {
-    /* ÷display: flex; */
-    flex: column;
-    margin: 20px;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:600,600i|Raleway:500');
+
+#about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .about-me-image {
-    margin: 10px;
-    padding: 30px;
-    width: 50px;
-    height: 50px;
+    justify-content: flex-start;
+    height: 100%;
     border: solid 1px orange;
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,900,700,500);
-body{
-    background:#10e88a; 
-    color:#fff; 
-    font-family: 'Roboto', sans-serif; 
-    margin:0; 
-    transition:all 200ms; 
-    will-change: background;
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(23, 23, 23);
+    width: 40vw;
+    margin-bottom: 20px;
+    height: 40vh;
+    padding: 1em;
 }
-article{display:block; 
-    width:100%; 
-    text-align:right; 
-    height:100vh;
-    margin:6em 0 0 0;}
-h4{
-    font-size:15em; 
-    font-weight:900; 
+
+body {
+    background: radial-gradient(circle at center, #aff69e 0%, #9ed8f6 10%, #f69ee5 20%, #d4980e 30%, #daa93a 40%, #3eda3a 50%, #b9ed94 60%);
+    background-size: 1000% 1000%;
+    -webkit-animation: backgroundGradient 30s ease infinite;
+    -moz-animation: backgroundGradient 30s ease infinite;
+    animation: backgroundGradient 30s ease infinite;
+    color: #C4C4C4;
+}
+
+p {
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+
+.text-container h2 {
+    font-size: 6em;  
+    margin:0 0.1em; 
+    text-align: right;
+}
+
+.text-container h3 {
+    font-family: 'Josefin Sans', sans-serif; 
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5em;
+    letter-spacing: .2em;
+    font-size: 3em;
     margin:0 0.1em; 
 }
-.clear{
-    clear:both;
+
+@-webkit-keyframes backgroundGradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+@-moz-keyframes backgroundGradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+@keyframes backgroundGradient { 
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
 }
