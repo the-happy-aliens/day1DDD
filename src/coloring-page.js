@@ -99,4 +99,5 @@ saveButton.addEventListener('click', () => {
                 picture: pictureToBeSaved.outerHTML
             });
         });
+    window.alert('Saved!');
 });

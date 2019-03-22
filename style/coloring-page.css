@@ -4,14 +4,20 @@
 }
 
 #thumbnail-container {
-    margin: 2em;
+    margin: 0 2em 2em 2em;
+    align-items: center;
 }
 #schemes-list-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 2em;
+    margin: 0 2em 2em 2em;
+}
+
+#save-button {
+    margin-top: 0;
+    text-align: center;
 }
 
 #schemes-list {
@@ -39,18 +45,20 @@ svg {
 #palette-container {
     display: flex;
     flex-flow: row wrap;
+    width: 12vw;
     margin-bottom: 10px;
 }
 
 .palette-color {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .thumbnail {
-    width: 75px;
-    height: 75px;
+    width: 110px;
+    height: 110px;
     background-color: white;
     margin: 5px;
 }
