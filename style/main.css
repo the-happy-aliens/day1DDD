@@ -7,6 +7,15 @@ body {
     text-align: center;
 }
 
+a {
+    color: #28bae2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     font-family: 'Josefin Sans', sans-serif; 
     font-weight: 600;
@@ -28,7 +37,7 @@ h2 {
     letter-spacing: .2em;
     text-align: center;
     color: #C4C4C4;
-    -webkit-animation: colorchange 10s linear 5s infinite alternate;
+    -webkit-animation: colorchange 10s linear 0s infinite alternate;
 }
 @-webkit-keyframes colorchange {
     0% {
@@ -69,4 +78,8 @@ h2 {
 
 #firebase-auth-container {
     margin: 50px;
+}
+
+.favorite-heart, .favorite {
+    cursor: pointer;
 }

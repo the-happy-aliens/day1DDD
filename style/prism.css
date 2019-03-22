@@ -17,42 +17,113 @@ body {
   animation: backgroundGradient 30s ease infinite;
   }
   
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.prism-box {
+  height: 300px;
+  width: 300px;
+}
+
+@-webkit-keyframes backgroundGradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+@-moz-keyframes backgroundGradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+@keyframes backgroundGradient { 
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+
+.prism {
+  cursor: pointer;
+  transform-origin: center center;
+  animation:
+    goRotate 10s infinite linear;
+}
+
+@keyframes goRotate {
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fade-in {
+    -webkit-animation: fadein 3s;
+    -moz-animation: fadein 3s; 
+    animation: fadein 3s;
+  }
+
   
-  .prism-box {
-    height: 300px;
-    width: 300px;
-  }
-  
-  @-webkit-keyframes backgroundGradient {
-      0%{background-position:70% 0%}
-      50%{background-position:31% 100%}
-      100%{background-position:70% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:70% 0%}
-      50%{background-position:31% 100%}
-      100%{background-position:70% 0%}
-  }
-  @keyframes AnimationName { 
-      0%{background-position:70% 0%}
-      50%{background-position:31% 100%}
-      100%{background-position:70% 0%}
-  }
-  
-  .prism {
-    transform-origin: center center;
-    animation:
-      goRotate 10s infinite linear;
-  }
-  
-  @keyframes goRotate {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.click-fade-in {
+  color: white;
+  -webkit-animation: clickfadein 2s;
+  -moz-animation: clickfadein 2s; 
+  animation: clickfadein 2s;
+}
+
+
+@-webkit-keyframes clickfadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes clickfadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes clickfadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.click-fade-out {
+  color: white;
+  -webkit-animation: clickFadeout 5s;
+  -moz-animation: clickFadeout 5s; 
+  animation: clickFadeout 5s;
+}
+@-webkit-keyframes clickFadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@-moz-keyframes clickFadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes clickFadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

@@ -9,37 +9,40 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style/main.css">
-   <link rel="stylesheet" type="text/css" href="style/header.css">
-   <link rel="stylesheet" type="text/css" href="style/prism.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/prism.css">
 
     <title>P R I S M A T I C</title>
 </head>
 <body>
 <div id="header-container"></div>
 <main>
-    <ul id="prism-list">
-       <li><a href="/quiz.html">Personality Quiz</a></li> 
-       <li><a href="/scheme-picker.html">Build a color scheme</a></li> 
-       <li><a href="/favorites.html">View your favorite schemes</a></li> 
-       <li id="coloring-link"><a href="/coloring-page.html">Color with your schemes</a></li> 
+    <ul id="prism-list" class="hidden">
+      <li><a href="/quiz.html">Personality Quiz</a></li> 
+      <li><a href="/scheme-picker.html">Build a color scheme</a></li> 
+      <li><a href="/favorites.html">View your favorite schemes</a></li> 
+      <li id="coloring-link"><a href="/coloring-page.html">Color with your schemes</a></li> 
     </ul>
     <div class="container">
             <div class="prism-box">
                 <svg version="1.1" id="prism" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" class="prism">
-            <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="136.5,486.7 347,101.2 562.1,490.7 "/>
-            <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="386.1,405.5 596.7,20 811.7,409.5 "/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="136.5" y1="486.7" x2="386.1" y2="405.5"/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="565.1" y1="490.7" x2="814.7" y2="409.5"/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="347.5" y1="97.5" x2="596.7" y2="16"/>
-            <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="811.3,521.4 601.5,907.3 385.7,518.2 "/>
-            <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="561.8,603.1 352,989 136.2,599.9 "/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="811.3" y1="521.4" x2="561.8" y2="603.1"/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="382.7" y1="518.2" x2="133.2" y2="599.9"/>
-            <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="601.1" y1="911" x2="352" y2="993"/>
+                viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" class="prism">
+                <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="136.5,486.7 347,101.2 562.1,490.7 "/>
+                <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="386.1,405.5 596.7,20 811.7,409.5 "/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="136.5" y1="486.7" x2="386.1" y2="405.5"/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="565.1" y1="490.7" x2="814.7" y2="409.5"/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="347.5" y1="97.5" x2="596.7" y2="16"/>
+                <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="811.3,521.4 601.5,907.3 385.7,518.2 "/>
+                <polygon fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="561.8,603.1 352,989 136.2,599.9 "/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="811.3" y1="521.4" x2="561.8" y2="603.1"/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="382.7" y1="518.2" x2="133.2" y2="599.9"/>
+                <line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="601.1" y1="911" x2="352" y2="993"/>
               </svg>
             </div>
           </div>
+    <div>
+        <p id="click-fade-in" class="hidden">click prism</p>
+    </div>
 </main>
 <script type="module" src="/src/index.js"></script>
 </body>
