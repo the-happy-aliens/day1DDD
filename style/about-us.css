@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
 .about-me-image {
     justify-content: flex-start;
     height: 100%;
@@ -38,7 +38,6 @@ p {
     padding: 10px;
 }
 
-
 .text-container h2 {
     font-size: 6em;  
     margin:0 0.1em; 
@@ -60,11 +59,13 @@ p {
     50%{background-position:31% 100%}
     100%{background-position:70% 0%}
 }
+
 @-moz-keyframes backgroundGradient {
     0%{background-position:70% 0%}
     50%{background-position:31% 100%}
     100%{background-position:70% 0%}
 }
+
 @keyframes backgroundGradient { 
     0%{background-position:70% 0%}
     50%{background-position:31% 100%}

@@ -83,7 +83,6 @@ colorSchemeGenerator.addEventListener('submit', event => {
         scheme: colorSchemeGeneratorData.get('scheme-type'),
         count: Number(colorSchemeGeneratorData.get('scheme-color-amount'))
     };
-    console.log(schemeOptions);
     const url = createSchemeUrl(schemeOptions);
 
     fetch(url)
