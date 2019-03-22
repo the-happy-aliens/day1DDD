@@ -4,9 +4,6 @@ fieldset {
     margin-left: 15%;
     margin-right: 15%;
 }
-/* input[type="radio"] {
-    display: block;
-} */
 
 legend {
     padding: 10px;
@@ -21,42 +18,59 @@ label {
 .yellow {
     border: solid 2px #e2c81d;
 }
+
 .yellow legend {
     background-color: #e2c81d;
 }
+
 .green {
     border: solid 2px #81DD17;
 }
+
 .green legend {
     background-color: #81DD17;
 }
+
 .mint {
     border: solid 2px #16DD8D;
 }
+
 .mint legend {
     background-color: #16DD8D;
 }
+
 .violet {
     border: solid 2px #6031C6;
 }
+
 .violet legend {
     background-color: #6031C6;
 }
+
 .pink {
     border: solid 2px #D323E0;
 }
+
 .pink legend {
     background-color: #D323E0;
 }
+
 .red {
     border: solid 2px #E81F09;
 }
+
 .red legend {
     background-color: #E81F09;
 }
+
 .orange {
     border: solid 2px #E06D08;
 }
+
 .orange legend {
     background-color: #E06D08;
+}
+
+#quiz-button {
+    margin-bottom: 50px;
 }
