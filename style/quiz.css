@@ -1,6 +1,8 @@
 fieldset {
     margin-bottom: 20px;
     border-radius: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 /* input[type="radio"] {
     display: block;
@@ -11,6 +13,11 @@ legend {
     border-radius: 10px;
     color: black;
 }
+
+label {
+    margin-right: 5px;
+}
+
 .yellow {
     border: solid 2px #e2c81d;
 }

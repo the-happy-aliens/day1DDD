@@ -5,17 +5,26 @@ loadHeader();
 
 const prismBox = document.querySelector('.prism-box');
 const prismList = document.getElementById('prism-list');
-const coloringLink = document.getElementById('coloring-link');
+const prismPrompt = document.getElementById('click-fade-in');
 
-prismBox.addEventListener('click', () => {
-    if(prismList.hidden) {
-        prismList.hidden = false;
-    }
-    else {
-        prismList.hidden = true;
-    } 
+prismBox.addEventListener('mouseover', () => {
+    prismPrompt.classList.remove('hidden');
+    prismPrompt.classList.remove('click-fade-out');
+    prismPrompt.classList.add('click-fade-in');
 });
 
+prismBox.addEventListener('mouseleave', () => {
+    prismPrompt.classList.remove('click-fade-in');
+    prismPrompt.classList.add('click-fade-out');
+});
+
+
+prismBox.addEventListener('click', () => {
+    prismList.classList.remove('hidden');
+    prismList.classList.add('fade-in');
+});
+
+const coloringLink = document.getElementById('coloring-link');
 auth.onAuthStateChanged(user => {
     const userId = user.uid;
     const userFavoritesRef = usersFavoriteColorSchemesRef.child(userId);

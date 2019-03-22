@@ -21,6 +21,7 @@
 
 #schemes-list li:hover {
     background-color: darkgray;
+    cursor: pointer;
 }
 
 #coloring-container {
@@ -38,6 +39,7 @@ svg {
 #palette-container {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 10px;
 }
 
 .palette-color {
@@ -51,4 +53,8 @@ svg {
     height: 75px;
     background-color: white;
     margin: 5px;
+}
+
+#instructions {
+    text-align: center;
 }
